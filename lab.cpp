@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//CAMBIO EXTERNO
+//CAMBIO interno
 
 int sumaArreglo(int arr[], int n){//se defne la funcion para luego ser declarada en header y en main se utiliza
 	int suma=0;

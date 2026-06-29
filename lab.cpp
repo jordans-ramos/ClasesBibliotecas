@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//CAMBIO EXTERNO
+
 int sumaArreglo(int arr[], int n){//se defne la funcion para luego ser declarada en header y en main se utiliza
 	int suma=0;
 	for(int i = 0; i<n; i++){
@@ -18,7 +20,7 @@ int maximo(int arr[], int n){
 			max=arr[i];
 		}
 		#ifdef DEBUG
-			printf("Máximo: %d\n", max);
+			printf("MÃ¡ximo: %d\n", max);
 		#endif
 	}
 	return max;

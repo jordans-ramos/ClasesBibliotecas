@@ -2,14 +2,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int sumaArreglo(int arr[], int n){//se defne la funcion para luego ser declarada en header y en main se utiliza
+	int suma=0;
+	for(int i = 0; i<n; i++){
+		suma += arr[i];
+	}
+	/for (int i =0; i<n; suma += arr[i++]);/
+	return suma;
+}
+
+int maximo(int arr[], int n){
+	int max=arr[0];
+	for(int i=1;i<n;i++){
+		if(arr[i]>max){
+			max=arr[i];
+		}
+		#ifdef DEBUG
+			printf("Máximo: %d\n", max);
+		#endif
+	}
+	return max;
+}
+
+{
+	for(int i = 0; i<n; i++){
+		arr[i] = CUADRADO(arr[i]);
+	}
+}
+
 int busquedaLineal(int arr[], int n, int objetivo){
 	for(int i=0; i<n; i++){
 		if(arr[i]==objetivo)return i;
 	}
 	return -1;
 }
-
-
 
 int busquedaBinariaIterativa(int arr[], int n, int objetivo){
 	int inicio = 0, fin = n-1, mit;
@@ -23,8 +49,6 @@ int busquedaBinariaIterativa(int arr[], int n, int objetivo){
 	return -1;
 }
 
-
-
 int busquedaBinariaRecursiva(int arr[], int n, int objetivo, int inicio, int fin){
 	
 	if(inicio>fin)return -1;
@@ -37,7 +61,6 @@ int busquedaBinariaRecursiva(int arr[], int n, int objetivo, int inicio, int fin
 	return busquedaBinariaRecursiva(arr,n,objetivo,inicio,fin);
 	
 }
-
 
 int imprimirArreglo(int arr[], int n){
 	for(int i=0; i<n; i++){
@@ -86,8 +109,8 @@ void insertionSortDesc(int arr[], int n){
 		arr[j-1]=aux;
 	}
 }
-/*
-void insertionSortDesc(int arr[], int n){
+
+//void insertionSortDesc(int arr[], int n){
 	int aux;
 	for(int i=0; i<n; i++){
 		int j=i-1;
@@ -99,7 +122,6 @@ void insertionSortDesc(int arr[], int n){
 		arr[j+1]=aux;
 	}
 }
-*/
 
 void mergeSort(int arr[], int inicio, int fin){
 	int mit=(inicio+fin)/2;
@@ -150,8 +172,8 @@ void quickSort(int arr[], int inicio, int fin){
 	if(inicio>=fin)return;
 	posPivote = particionar(arr, inicio,fin);
 	
-	quickSort(arr, inicio, posPivote-1);
-	quickSort(arr,posPivote+1,fin);
+	//quickSort(arr, inicio, posPivote-1);
+	//quickSort(arr,posPivote+1,fin);
 	
 }
 
@@ -179,39 +201,15 @@ void complejidadConstante(int arr[]){
 	arr[2] += arr[3];
 }
 
-void complejidadLineal(int arr[]){
-	
+int minimo(int arr[], int n){
+	int min=arr[0];
+	for(int i=1;i<n;i++){
+		if(arr[i]>min){
+			max=arr[i];
+		}
+		#ifdef DEBUG
+			printf("Minimo: %d\n", max);
+		#endif
+	}
+	return max;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

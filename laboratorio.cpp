@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 	//int numeros[]={2,4,3,5,8,1};
-	int numeros[]={5,8,10,15,20,32};
+	int numeros[]={20, 8, 4, 5, 7, 8, 9};
 	
 	int arreglo[]={10,12,11,4,8};
 	

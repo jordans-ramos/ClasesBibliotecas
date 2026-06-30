@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=GR2SW\lab.cpp
+FileName=lab.cpp
 CompileCpp=1
 Folder=source
 Compile=1
